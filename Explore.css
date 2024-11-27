@@ -1,0 +1,420 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    flex-wrap: wrap;
+}
+
+.left-panel {
+    width: 100%;
+    max-width: 300px;
+}
+
+.right-panel {
+    width: 100%;
+    max-width: calc(100% - 300px);
+}
+
+.side-nav {
+    width: 245px;
+    height: 100%;
+    background: #1e1e1e;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px 20px;
+    border-right: 1px solid #333;
+}
+
+.logo {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.logo-img {
+    width: 110px;
+    margin-left: 10px;
+}
+
+.logo-icon {
+    width: 30px;
+    margin-left: 10px;
+    margin-bottom: 40px;
+}
+
+.nav-links {
+    list-style: none;
+    position: relative;
+}
+
+.nav-links li {
+    padding: 3px 0;
+    font-size: large;
+    width: 100%;
+    height: 60px;
+    transition: background-color 0.5s ease;
+}
+
+.nav-links li a {
+    color: #e0e0e0;
+    text-decoration: none;
+    padding: 15px 14px;
+    display: flex;
+}
+
+.nav-links li p {
+    margin-top: 5px;
+}
+
+.nav-img {
+    width: 25px;
+    margin-right: 15px;
+}
+
+.nav-links li:hover {
+    background-color: #333;
+    border-radius: 10px;
+}
+
+.nav-links li:hover a {
+    color: #ffffff;
+    transition: 0.3s;
+}
+
+.nav-links li:nth-child(8) {
+    margin-bottom: 80px;
+}
+
+.logo-icon {
+    display: none;
+}
+
+.more-section {
+    margin-top: 10px;
+}
+
+.more-section .drop-up-options {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #1e1e1e;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    display: none;
+}
+
+.drop-up-options {
+    position: absolute;
+    bottom: 65px;
+    left: 60%;
+    width: 120%;
+    transform: translateX(-50%);
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    display: none;
+}
+
+.drop-up-options li {
+    list-style: none;
+    padding: 5px 10px;
+    margin: 0;
+    font-size: 16px;
+}
+
+.drop-up-options hr {
+    margin: 0;
+    border: none;
+    border-top: 2px solid #444;
+}
+
+.drop-up-options li a {
+    color: #e0e0e0;
+    text-decoration: none;
+}
+
+.drop-up-options li a:hover {
+    background-color: #333;
+}
+
+.show-drop-up {
+    display: block;
+}
+
+.search {
+    position: fixed;
+    left: 0;
+    width: 400px;
+    height: 100vh;
+    background-color: #1e1e1e;
+    font-size: 20px;
+    border-left: 1px solid #333;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    box-shadow: 5px 0 20px 0 rgba(0, 0, 0, 0.2);
+    visibility: hidden;
+    transition: left 0.3s ease;
+}
+
+.search h1 {
+    position: relative;
+    left: 40px; 
+    top: 20px;
+    font-size: 30px;
+    color: #e0e0e0;
+}
+
+.box {
+    position: relative;
+    left: 20px;
+    top: 50px;
+    width: 90%;
+    height: 45px;
+}
+
+.box .search-input {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+    background-color: #333;
+    border-radius: 5px;
+    padding-left: 20px;
+    font-size: 20px;
+    color: #e0e0e0;
+}
+
+.output {
+    position: relative;
+    top: 40%;
+    left: 30%;
+    font-size: 16px;
+    color: #e0e0e0;
+}
+
+.search p {
+    position: relative;
+    left: 35px;
+    top: 80px;
+    color: #e0e0e0;
+}
+
+.show-search {
+    visibility: visible;
+    left: 70px;
+    z-index: 1;
+}
+
+.main {
+    width: 930px;
+    height: auto;
+    margin-left: 130px;
+    margin-top: 10px;
+}
+
+.myprofile {
+    width: 930px;
+    height: 220px;
+    border-bottom: 1px solid #333;
+    display: flex;
+    background-color: #1e1e1e;
+}
+
+.profile-img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: white;
+}
+
+.instagram-border {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background: conic-gradient(red, orange, yellow, green, blue, indigo, violet, red);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.instagram {
+    align-items: center;
+    width: 250px;
+    height: 250px;
+}
+
+.all {
+    margin-left: 80px;
+}
+
+.idnamesection {
+    display: flex;
+    margin-top: 30px;
+    width: 450px;
+    height: 32px;
+}
+
+.settingsicon {
+    width: 28px;
+    height: 28px;
+}
+
+.editbtn {
+    width: 100px;
+    height: 30px;
+    margin: 0 10px;
+    border: none;
+    background-color: #333;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+}
+
+.editbtn:hover {
+    background-color: #444;
+    cursor: pointer;
+}
+
+.followsection {
+    margin-top: 10px;
+}
+
+.followsection ul {
+    display: flex;
+}
+
+.followsection ul li {
+    list-style: none;
+    padding: 10px;
+    margin-right: 40px;
+    padding-left: 0;
+}
+
+.nameandbio {
+    margin-top: 10px;
+}
+
+.postnav {
+    width: 930px;
+    height: auto;
+    background-color: #1e1e1e;
+}
+
+.postnav ul {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-right: 0px;
+}
+
+.postnav ul li {
+    list-style: none;
+    padding: 10px;
+    padding-left: 0;
+    margin-right: 50px;
+    color: #e0e0e0;
+}
+
+.postnav_img {
+    width: 15px;
+    vertical-align: middle;
+}
+
+.postnav ul li:nth-child(1) {
+    border-top: 1px solid #444;
+}
+
+.postnav ul li:hover {
+    border-top: 1px solid #444;
+    cursor: pointer;
+}
+
+.footer {
+    margin-top: 30px;
+    font-size: 12px;
+}
+
+.footer ul {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    color: gray;
+}
+
+.footer ul li {
+    list-style: none;
+    padding: 10px;
+}
+
+.footer ul li:hover {
+    border-bottom: 1px solid #444;
+    cursor: pointer;
+}
+
+.footer p {
+    justify-content: center;
+    text-align: center;
+    margin-top: 10px;
+    color: gray;
+}
+
+.posts {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 100%;
+}
+
+.grid-item {
+    position: relative;
+    overflow: hidden;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+}
+
+.img_container {
+    position: relative;
+}
+
+.mypost_img1 {
+    width: 100%;
+    height: 10%;
+    object-fit: cover;
+}
+
+.mypost_img2 {
+    width: 100%;
+    height: 300%;
+    object-fit: cover;
+}
+
+.mypost_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.after {
+    position: absolute;
+   
